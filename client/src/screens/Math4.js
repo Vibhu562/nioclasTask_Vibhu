@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {MathJaxContext} from "better-react-mathjax"
-
+import {MathJax} from 'better-react-mathjax';
 class Math4 extends Component {
     
 
@@ -15,7 +15,7 @@ class Math4 extends Component {
    
     componentDidMount() {
         fetch(
-"https://0h8nti4f08.execute-api.ap-northeast-1.amazonaws.com/getQuestionDetails/getquestiondetails?QuestionID=AreaUnderTheCurve_4")
+"https://0h8nti4f08.execute-api.ap-northeast-1.amazonaws.com/getQuestionDetails/getquestiondetails?QuestionID=BinomialTheorem_4")
             .then((res) => res.json())
             .then((json) => {
                 this.setState({
@@ -36,6 +36,7 @@ class Math4 extends Component {
                 items.map((item) => ( 
                 <ol key = { item.QuestionID } >
                     <MathJaxContext>
+                   
                     { item.Question }
                     </MathJaxContext> 
                     </ol>
